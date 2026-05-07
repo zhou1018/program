@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&family=Noto+Serif+SC:wght@400;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-serif: "Noto Serif SC", serif;
+
+  --color-mint-50: #F0FFF4;
+  --color-mint-100: #E6FFFA;
+  --color-mint-200: #B2F5EA;
+  --color-mint-600: #319795;
+  
+  --color-baby-blue-50: #F7FAFC;
+  --color-baby-blue-100: #EBF8FF;
+  --color-baby-blue-200: #BEE3F8;
+  --color-baby-blue-600: #3182CE;
+
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-3xl: 2rem;
+
+  --shadow-soft: 0 10px 25px -5px rgba(0, 0, 0, 0.04), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
+  --shadow-warm: 0 20px 25px -5px rgba(49, 151, 149, 0.05), 0 10px 10px -5px rgba(49, 151, 149, 0.02);
+}
+
+@layer base {
+  body {
+    @apply bg-slate-50/50 text-slate-800 antialiased;
+  }
+}
+
+.glass-card {
+  @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-soft;
+}
+
+.medical-card {
+  @apply bg-white rounded-3xl shadow-soft border border-slate-100/50 p-6 transition-all duration-300;
+}
+
+.medical-card:hover {
+  @apply shadow-warm border-mint-100/50 -translate-y-0.5;
+}
+
+.step-active {
+  @apply bg-mint-600 text-white shadow-lg shadow-mint-100;
+}
+
+.step-inactive {
+  @apply bg-white text-slate-400 border border-slate-100;
+}
